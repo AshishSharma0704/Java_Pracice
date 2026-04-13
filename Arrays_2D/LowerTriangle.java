@@ -1,4 +1,4 @@
-package String;
+package Arrays_2D;
 import java.util.*;
 public class LowerTriangle {
     public static void main(String[] args) {
