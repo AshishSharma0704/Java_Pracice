@@ -13,17 +13,18 @@ int count=0;
 for(int i = 0; i < n; i++) {
     for(int j = i; j < n; j++) {
 
-        int product = 1;
-
-            for(int p = i; p < n; p++) {
-                product *= nums[p];
-
-                if(product < k) {
-                    count++;
-                } else {
-                    break; // optimization
-                }
-    }System.out.println(count);
-}
+        int product=nums[i];int ans=1;
+        for(int p = i; p <= j; p++) {
+            if(nums[p]==nums[i]){
+                ans=nums[p];
+            }else{
+                ans=product*=nums[p];
+            }
+        }
+        if(ans<k){
+            count++;
+        }
     }
-}}
+}System.out.print(count);
+    }
+}
