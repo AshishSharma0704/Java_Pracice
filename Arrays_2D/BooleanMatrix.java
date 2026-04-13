@@ -16,21 +16,21 @@ public class BooleanMatrix {
             }
         }
 
-        boolean[] row = new boolean[n];
-        boolean[] col = new boolean[m];
+        int[] row = new int[n];
+        int[] col = new int[m];
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
                 if(arr[i][j] == 1){
-                    row[i] = true;
-                    col[j] = true;
+                    row[i] = 1;
+                    col[j] = 1;
                 }
             }
         }
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
-                if(row[i] || col[j]){
+                if(row[i]==1 || col[j]==1){
                     arr[i][j] = 1;
                 }
             }
